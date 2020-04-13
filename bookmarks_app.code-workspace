@@ -4,5 +4,7 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+	},
+	"python.autoComplete.extraPaths": ["C:\\workspace\\Learning\\Python\\2_django_by_example\\bookmarks\\bookmarks"]
 }
