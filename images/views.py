@@ -40,13 +40,14 @@ def image_detail(request, id, slug):
 def  image_like(request):
     image_id = request.POST.get('id')
     action = request.POST.get('action')
+    print(action)
     if image_id and action:
         try:
             image = Image.objects.get(id=image_id)
             if action == 'like':
                 image.users_like.add(request.user)
             else:
-                image.user_like.remove(request.user)
+                image.users_like.remove(request.user)
             return JsonResponse({'status':'OK'})
         except:
             pass
