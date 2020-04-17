@@ -151,3 +151,7 @@ SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 ABSOLUTE_URL_OVERRIDES = {
     'auth.user': lambda u: reverse_lazy('user_detail', args=[u.username])
 }
+
+REDIS_HOST = '127.0.0.1'
+REDIS_PORT = 6379
+REDIS_DB = 0
