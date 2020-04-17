@@ -42,6 +42,11 @@
                       ); 
                     });
                 {% endblock %}
+
+               var rank_list = $('#rankinga');
+               $.get('/images/ranking/', function(data){
+                   rank_list.html(data);
+               });
             });
         </script>
     </head>
