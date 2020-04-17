@@ -23,7 +23,8 @@ class Image(models.Model):
         return reverse("images:detail", args=[self.id, self.slug])
     
     def __str__(self):
-        return self.title, self.users_like
+        return self.title
+        # , self.users_like
 
     def save(self, *args, **kwargs):
         if not self.slug:
